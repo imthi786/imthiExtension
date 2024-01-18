@@ -1,0 +1,15 @@
+{
+    "manifest_version": 3,
+    "name": "Base Setup ",
+    "version": "1.0.0",
+    "description": "learing basic to advance concepts in extenction",
+    "icons": {
+      "16": "img/16.png",
+      "48": "img/48.png",
+      "128": "img/128.png"
+    },
+    "action": {
+        "default_title": "Click to view a pop",
+        "default_popup": "popup.html"
+      }
+  }

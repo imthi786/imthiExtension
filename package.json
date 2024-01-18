@@ -1,0 +1,14 @@
+{
+  "name": "none",
+  "version": "1.0.0",
+  "description": "nothing",
+  "main": "index.js",
+  "scripts": {
+    "test": "no"
+  },
+  "author": "imthiyas",
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "^3.7.1"
+  }
+}
