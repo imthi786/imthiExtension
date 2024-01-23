@@ -1,4 +1,3 @@
-console.log("hello buddy");
 
 chrome.tabs.onActivated.addListener((tabs)=>{
 
@@ -6,22 +5,22 @@ chrome.tabs.onActivated.addListener((tabs)=>{
 
     chrome.tabs.get(tabs.tabId, function(tab) {
         
-    if(tab.url == 'chrome://extensions/')
+    if(tab.url == 'https://www.google.com/')
     {
-        chrome.scripting.executeScript({
-            target:{tabId:tab.id},
-            file:['contentScript.js']
-        })
+    //    message send in background js
+            chrome.tabs.sendMessage(tabs.tabId,'i am injected in your tab',(responce)=>{
+                console.log(responce);
+            })
+     
     }
-
     })
 })
 
+// message recive in contentjs 
 
 chrome.runtime.onMessage.addListener((message,sender,sendResponce)=>{
     console.log(message);
     console.log(sender);
-
-    sendResponce('come from background')
+    sendResponce('welcom content')
     
 })
